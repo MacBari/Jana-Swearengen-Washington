@@ -1,0 +1,485 @@
+@charset 'UTF-8';
+
+html,
+html * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial, sans-serif;
+  font-size: 1vw;
+  background: white;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  -webkit-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+}
+a, a:visited {
+    color: inherit;
+}
+header {
+  position: fixed;
+  padding: 1.5em;
+  top: 0;
+  left: 0;
+  width: 77%;
+  z-index: 1000;
+}
+
+.site-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 400;
+  display: block !important;
+  padding: 1em 0em 0 0;
+  opacity: .95;
+  background: c;
+}
+
+.site-nav ul {
+  list-style-type: none;
+  margin: 0;
+  text-align: center;
+}
+
+.site-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.site-nav ul li {
+  display: inline-block;
+  margin-bottom: 2;
+  margin-left: 1.7em;
+  z-index: 30000;
+}
+
+.site-nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
+.site-nav ul li a {
+  font-size: 1.8em;
+  text-decoration: none;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: #a9b800;
+  transition: color .3s;
+  text-align: center;
+  display: block;
+  padding: 1px;
+  background-color: transparent; /* Add this line to make the background transparent */
+  z-index: 30000;
+}
+
+.site-nav ul li a:hover {
+  outline: none;
+  background-color: white; /* Add this line to change the background color on hover */
+  border-bottom: solid white; /* Optionally add a border to the bottom on hover */
+  z-index: 30000;
+}
+
+.site-nav ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 65%;
+    right: -20px;
+    transform: translateY(-70%);
+    width: 2px;
+    height: 90%;
+    background-color: #ffffff; /* Adjust the color as needed */
+}
+
+.hero {
+  position: relative;
+  height: 58vw;
+  background-color: #2e4b2d;
+  background-size: cover;
+}
+
+.donate-section {
+  position: relative;
+  height: 96vw;
+  background-color: #2e4b2d;
+  background-size: cover;
+}
+
+.hero-content {
+  font-family: 'acumin-pro-extra-condensed', sans-serif;
+  color: #fff;
+  position: static;
+  padding-top: 9em;
+  padding-left: 7em;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.donate-content {
+  font-family: 'acumin-pro-extra-condensed', sans-serif;
+  color: #fff;
+  position: static;
+  padding-top: 5em;
+  padding-left: 0em;
+  padding-right: 5em;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Add the styles for the table */
+.jana-table {
+  background: none;
+  border: none;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add the styles for the images */
+.jana-image,
+.second-image {
+  max-width: 600px;
+  display: block;
+  padding: 0% 0 9% 0%;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Add the styles for the table on the right */
+.right-table {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 600px; /* Adjust the margin as needed */
+    margin-top: -767px; /* Adjust the negative margin to align the tops */
+}
+
+h2 {
+	font-weight: 100;
+	font-size: 2em;
+    line-height: 2.2;
+	margin-bottom: -.35em;
+	padding-top: 5%;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 8px rgba(0, 0, 0,.2);
+}
+h1 {
+  margin-bottom: 1.5%;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0,.05);
+  letter-spacing: .10em;
+  margin-left: .7em;
+  font-size: 6.5vw;
+}
+h3 {
+  font-size: 1.5em;
+  font-weight: 100;
+  line-height: 2.75;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0,.2);
+}
+
+.button {
+	border: 1px #FFFFFF solid;
+	padding: 15px 60px;
+	border-radius: 30px;
+	color: #FFFFFF;
+	text-decoration: none;
+	
+}
+
+/* Styles for the buttons and arrow */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-inverted {
+    background-color: #2e4b2d;
+    color: #ffffff;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #2e4b2d;
+}
+
+.arrow {
+    margin-left: 5px;
+}
+
+/* Additional styles to create an animation effect on hover */
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: 0;
+    transition: transform 0.3s;
+    transform: translateX(100%);
+}
+
+.button:hover::before {
+    transform: translateX(0);
+}
+
+/* Add styles for the arrow */
+.arrow {
+    margin-left: 5px;
+}
+
+.intro {
+  position: relative;
+  color: #fff;
+  background: #2e7620;
+  padding: .1em 6em 10.5em;
+  border-bottom: 2px solid white;
+}
+.intro-text {
+  position: relative;
+}
+.intro p {
+  font-family: 'acumin-pro', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.8;
+  position: relative;
+  z-index: 200;
+  text-align: left;
+  letter-spacing: .100em;
+  text-transform: none;
+}
+
+.platform-statement-text {
+    font-family: 'acumin-pro-extra-condensed', sans-serif;
+    color: #FFF; /* Change the color as needed */
+	font-size: 1.3em;
+    text-align: left; /* Align the text to the left */
+    padding: 2em;
+	letter-spacing: .100em;
+	z-index: 200;
+	position: relative;
+	text-transform: none;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.divider {
+  	position: relative;
+	background: #fff;
+}
+
+.artworks {
+    /* ... (previous artworks styles) ... */
+    border-bottom: 2px solid white; /* Add this line to create the divider bar */
+}
+
+.artwork .artwork-description {
+  background: #2e4b2d;
+  color: #fff;
+  width: 100%;
+  padding: 11.25em 13em 11.5em;
+}
+.artwork-title {
+  font-family: 'acumin-pro-extra-condensed', sans-serif;
+  font-size: 3em;
+  font-weight: 100;
+  padding: 2em 0 0 0;
+  letter-spacing: .36em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-bottom: .5em;
+  text-align: center;
+}
+.artwork-text {
+  font-size: 1.1em;
+  line-height: 1.9;
+  opacity: .8;
+  max-width: 20em;
+}
+
+.info-box-one {
+	background-color: #2e4b2d;
+	color: #FFFFFF;
+	padding: 30px 20px 60px;
+	text-align: center;
+	font-size: 1.8em;
+}
+
+.info-box-two {
+	background-color: #2e4b2d;
+	color: #FFFFFF;
+	padding: 30px 20px 60px;
+	text-align: center;
+	font-size: 1.8em;
+}
+footer {
+    margin-top: -.3em;
+    padding-top: 0.2em;
+    background-image: -webkit-linear-gradient(135deg, green, pink 100%);
+    background-image: -o-linear-gradient(135deg, green, pink 100%);
+    background-image: linear-gradient(110deg, pink, green 100%);
+    border-top: 2px solid white;
+}
+
+.footer-image img {
+    margin-bottom: 20px; /* Adjust the value as needed */
+	max-width: 357px;
+}
+
+
+.footer-content {
+    width: 64%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+	text-align: center;
+}
+
+.footer-social {
+    display: block;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+}
+
+.footer-social li {
+    display: inline-block;
+    margin: 0 1.2em;
+}
+
+.footer-social li a {
+    line-height: 3.5em;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.footer-social li a:hover {
+    border-color: #fff;
+    background: #fff;
+}
+
+.footer-social li a img {
+    width: auto;
+    height: 1em;
+}
+
+.footer-social li a .social-hover {
+    display: none;
+}
+
+.footer-social li a:hover .social-default {
+    display: none;
+}
+
+.footer-social li a:hover .social-hover {
+    display: inline;
+}
+
+.footer-info {
+    padding-top: 2em;
+}
+
+.footer-info p {
+    font-size: 1.1em;
+    color: #fff;
+    line-height: 1;
+    max-width: 80em;
+    margin-bottom: 1.1em;
+}
+
+.footer-info {
+    clear: both;
+}
+
+.footer-legal {
+    opacity: 0.8;
+}
+
+.footer-credit a:hover {
+    text-decoration: none;
+}
+
+.footer-disclaimer {
+    /* Add your styles here */
+}
+
+.col {
+	width: 50%;
+}
+
+.row:before, .row:after {
+	content: "";
+	display: table;
+}
+
+.row:after {
+	clear: both;
+}
+
+/*Tablet View*/
+
+@media (min-width: 768px){
+	
+	.style-nav ul li {
+		display: inline-block;
+	}
+
+	.style-nav ul {
+		text-align: center;
+	}
+
+}
+.col-md-one-half {
+		width: 50%;
+		border-bottom: 2px solid white;
+	}
+	
+	.col {
+		float: left;
+		padding: 0px px 14px;
+	
+	}
+
+
+/*Desktop View*/
+
+@media (min-width: 1024px){
+	
+	.style-logo {
+		float: left;
+	}
+	
+	.style-nav {
+		float: right;
+	}
+}
