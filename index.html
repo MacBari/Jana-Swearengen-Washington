@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Re-Elect Jana Swearengen-Washington" content="This site is sponsored by Friends to re-elect Jana Swearengen-Washington for the district 4 Memphis City Council.">
+	<meta name="author" content="Jabari Oliver">
     <title>Jana Swearengen-Washington</title>
     <script src="https://use.typekit.net/kxf0iwn.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link href="styles.css" rel="stylesheet">
     <link href="your-custom-styles.css" rel="stylesheet">
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css"> 
+	<link rel="icon" href= "Jana-Favicon.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -22,9 +25,9 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#about">About Me</a></li> <!-- Updated the href value -->
-                    <li><a href="My_Platform.html">My Platform</a></li>
+                    <li><a href="My_Platform.html" onclick="redirectNext(0);">My Platform</a></li>
                     <li><a href="#join">Join Me</a></li>
-                    <li><a href="Donate.html">Donate</a></li>
+                    <li><a href="Donate.html" onclick="redirectNext(1);">Donate</a></li>
                 </ul>
             </nav>
         </div>
@@ -157,7 +160,7 @@
         </div>
         <ul class="footer-social">
             <li>
-                <a href="https://www.facebook.com/profile.php?id=100086318389736">
+                <a href="https://www.facebook.com/profile.php?id=100086318389736" target="_blank">
                     <img class="social-default" src= "Images/social-facebook.png" alt="footer-social">
                     <img class="social-hover" src= "Images/social-facebook-hover.png" alt="footer-social">
                 </a>
@@ -189,6 +192,7 @@
 
             // Add an event listener to the Home link specifically
             const homeLink = document.querySelector('.site-nav a[href="index.html"]');
+
             if (homeLink) {
                 homeLink.addEventListener('click', scrollToTop);
             }
@@ -198,6 +202,18 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
+
+        function redirectNext(next){
+            console.log(next);
+
+            if(next === 0){
+                window.location.href = "My_Platform.html";
+            }
+
+            if(next === 1){
+                window.location.href = "Donate.html";
+            }
+        }
     </script>
 	</body>
 </html>
